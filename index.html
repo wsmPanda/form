@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FORM</title>
+    <link rel='stylesheet' href='css/site.css' />
+    <script data-main="js/main" src="js/require.js"></script>
+    <!--
+    <script  src="/javascripts/handlebars-v4.0.5.js"></script>
+    <script  src="/javascripts/jquery-1.12.3.js"></script>
+    <script  src="/javascripts/t1.js"></script>
+    -->
+</head>
+<body>
+<div id="my_div1"></div>
+<script id="table1" type="text/x-handlebars-template">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+        { "dsadsadsa" }
+        {{#if users}}
+        {{#each users}}
+        <tr>
+            <td>{{username}}</td>
+            <td>{{firstname}}-{{lastname}}</td>
+            <td>{{email}}</td>
+        </tr>
+        {{/each}}
+        {{else}}
+        <tr>
+            <td colspan="3">数据？？？</td>
+        </tr>
+        {{/if}}
+    </table>
+</script>
+</body>
+</html>
