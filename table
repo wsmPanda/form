@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>FORM</title>
+    <link rel='stylesheet' href='css/site.css'/>
+    <link rel='stylesheet' href='css/codemirror.css'/>
+    <link rel='stylesheet' href='css/daterangepicker.css'/>
+    <link rel='stylesheet' href='css/bootstrap.css'/>
+    <link rel="stylesheet" href="css/umeditor.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.css">
+    <script data-main="js/index" src="js/require.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+
+    </div>
+</div>
+</body>
+</html>
