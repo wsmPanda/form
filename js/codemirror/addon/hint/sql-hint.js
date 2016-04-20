@@ -105,7 +105,7 @@
   }
 
   function nameCompletion(cur, token, result, editor) {
-    // Try to complete table, column names and return start position of completion
+    // Try to complete table.html, column names and return start position of completion
     var useBacktick = false;
     var nameParts = [];
     var start = token.start;
@@ -124,7 +124,7 @@
       }
     }
 
-    // Try to complete table names
+    // Try to complete table.html names
     var string = nameParts.join(".");
     addMatches(result, string, tables, function(w) {
       return useBacktick ? insertBackticks(w) : w;
@@ -141,7 +141,7 @@
 
     var alias = false;
     var aliasTable = table;
-    // Check if table is available. If not, find table by Alias
+    // Check if table.html is available. If not, find table.html by Alias
     if (!getTable(table)) {
       var oldTable = table;
       table = findTableByAlias(table, editor);

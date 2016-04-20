@@ -4462,7 +4462,7 @@ function createSafeFragment( document ) {
 		input = document.createElement( "input" );
 
 	// Setup
-	div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
+	div.innerHTML = "  <link/><table.html></table.html><a href='/a'>a</a><input type='checkbox'/>";
 
 	// IE strips leading whitespace when .innerHTML is used
 	support.leadingWhitespace = div.firstChild.nodeType === 3;
@@ -4528,10 +4528,10 @@ var wrapMap = {
 
 	// Support: IE8
 	param: [ 1, "<object>", "</object>" ],
-	thead: [ 1, "<table>", "</table>" ],
-	tr: [ 2, "<table><tbody>", "</tbody></table>" ],
-	col: [ 2, "<table><tbody></tbody><colgroup>", "</colgroup></table>" ],
-	td: [ 3, "<table><tbody><tr>", "</tr></tbody></table>" ],
+	thead: [ 1, "<table.html>", "</table.html>" ],
+	tr: [ 2, "<table.html><tbody>", "</tbody></table.html>" ],
+	col: [ 2, "<table.html><tbody></tbody><colgroup>", "</colgroup></table.html>" ],
+	td: [ 3, "<table.html><tbody><tr>", "</tr></tbody></table.html>" ],
 
 	// IE6-8 can't serialize link, script, style, or any html5 (NoScope) tags,
 	// unless wrapped in a div with non-breaking characters in front of it.
@@ -4641,15 +4641,15 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 					nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[ 0 ] ) );
 				}
 
-				// Remove IE's autoinserted <tbody> from table fragments
+				// Remove IE's autoinserted <tbody> from table.html fragments
 				if ( !support.tbody ) {
 
-					// String was a <table>, *may* have spurious <tbody>
+					// String was a <table.html>, *may* have spurious <tbody>
 					elem = tag === "table" && !rtbody.test( elem ) ?
 						tmp.firstChild :
 
 						// String was a bare <thead> or <tfoot>
-						wrap[ 1 ] === "<table>" && !rtbody.test( elem ) ?
+						wrap[ 1 ] === "<table.html>" && !rtbody.test( elem ) ?
 							tmp :
 							0;
 
@@ -6661,9 +6661,9 @@ var documentElement = document.documentElement;
 
 		// Support: IE6-8
 		// First check that getClientRects works as expected
-		// Check if table cells still have offsetWidth/Height when they are set
-		// to display:none and there are still other visible table cells in a
-		// table row; if so, offsetWidth/Height are not reliable for use when
+		// Check if table.html cells still have offsetWidth/Height when they are set
+		// to display:none and there are still other visible table.html cells in a
+		// table.html row; if so, offsetWidth/Height are not reliable for use when
 		// determining if an element has been hidden directly using
 		// display:none (it is still safe to use offsets if a parent element is
 		// hidden; don safety goggles and see bug #4512 for more information).
@@ -6671,7 +6671,7 @@ var documentElement = document.documentElement;
 		reliableHiddenOffsetsVal = div.getClientRects().length === 0;
 		if ( reliableHiddenOffsetsVal ) {
 			div.style.display = "";
-			div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
+			div.innerHTML = "<table.html><tr><td></td><td>t</td></tr></table.html>";
 			contents = div.getElementsByTagName( "td" );
 			contents[ 0 ].style.cssText = "margin:0;border:0;padding:0;display:none";
 			reliableHiddenOffsetsVal = contents[ 0 ].offsetHeight === 0;
@@ -6840,8 +6840,8 @@ var
 		ralpha = /alpha\([^)]*\)/i,
 	ropacity = /opacity\s*=\s*([^)]*)/i,
 
-	// swappable if display is none or starts with table except
-	// "table", "table-cell", or "table-caption"
+	// swappable if display is none or starts with table.html except
+	// "table.html", "table.html-cell", or "table.html-caption"
 	// see here for display values:
 	// https://developer.mozilla.org/en-US/docs/CSS/display
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
@@ -8145,7 +8145,7 @@ jQuery.fn.delay = function( time, type ) {
 	// Setup
 	div = document.createElement( "div" );
 	div.setAttribute( "className", "t" );
-	div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
+	div.innerHTML = "  <link/><table.html></table.html><a href='/a'>a</a><input type='checkbox'/>";
 	a = div.getElementsByTagName( "a" )[ 0 ];
 
 	// Support: Windows Web Apps (WWA)

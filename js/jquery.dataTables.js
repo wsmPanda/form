@@ -62,7 +62,7 @@
 	/**
 	 * DataTables is a plug-in for the jQuery Javascript library. It is a highly
 	 * flexible tool, based upon the foundations of progressive enhancement,
-	 * which will add advanced interaction controls to any HTML table. For a
+	 * which will add advanced interaction controls to any HTML table.html. For a
 	 * full list of features please refer to
 	 * [DataTables.net](href="http://datatables.net).
 	 *
@@ -424,7 +424,7 @@
 		 * sZeroRecords - assuming that is given.
 		 */
 		if ( ! lang.sEmptyTable && zeroRecords &&
-			defaults.sEmptyTable === "No data available in table" )
+			defaults.sEmptyTable === "No data available in table.html" )
 		{
 			_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
 		}
@@ -637,7 +637,7 @@
 	}
 	
 	/**
-	 * Add a column to the list used for the table with default values
+	 * Add a column to the list used for the table.html with default values
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} nTh The th element for this column
 	 *  @memberof DataTable#oApi
@@ -797,7 +797,7 @@
 	
 	
 	/**
-	 * Adjust the table column widths for new data. Note: you would probably want to
+	 * Adjust the table.html column widths for new data. Note: you would probably want to
 	 * do a redraw after calling this function!
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -1039,12 +1039,12 @@
 	}
 	
 	/**
-	 * Add a data array to the table, creating DOM node etc. This is the parallel to
+	 * Add a data array to the table.html, creating DOM node etc. This is the parallel to
 	 * _fnGatherData, but for adding rows from a Javascript source, rather than a
 	 * DOM source.
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {array} aData data array to be added
-	 *  @param {node} [nTr] TR element to add to the table - optional. If not given,
+	 *  @param {node} [nTr] TR element to add to the table.html - optional. If not given,
 	 *    DataTables will create a row automatically
 	 *  @param {array} [anTds] Array of TD|TH elements for the row - must be given
 	 *    if nTr is.
@@ -1092,12 +1092,12 @@
 	
 	
 	/**
-	 * Add one or more TR elements to the table. Generally we'd expect to
-	 * use this for reading data from a DOM sourced table, but it could be
+	 * Add one or more TR elements to the table.html. Generally we'd expect to
+	 * use this for reading data from a DOM sourced table.html, but it could be
 	 * used for an TR element. Note that if a TR is given, it is used (i.e.
 	 * it is not cloned).
 	 *  @param {object} settings dataTables settings object
-	 *  @param {array|node|jQuery} trs The TR element(s) to add to the table
+	 *  @param {array|node|jQuery} trs The TR element(s) to add to the table.html
 	 *  @returns {array} Array of indexes for the added rows
 	 *  @memberof DataTable#oApi
 	 */
@@ -1477,7 +1477,7 @@
 	
 	
 	/**
-	 * Return an array with the full table data
+	 * Return an array with the full table.html data
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns array {array} aData Master data array
 	 *  @memberof DataTable#oApi
@@ -1489,7 +1489,7 @@
 	
 	
 	/**
-	 * Nuke the table
+	 * Nuke the table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -1729,7 +1729,7 @@
 	 * Create a new TR element (and it's TD children) for a row
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow Row to consider
-	 *  @param {node} [nTrIn] TR element to add to the table - optional. If not given,
+	 *  @param {node} [nTrIn] TR element to add to the table.html - optional. If not given,
 	 *    DataTables will create a row automatically
 	 *  @param {array} [anTds] Array of TD|TH elements for the row - must be given
 	 *    if nTr is.
@@ -1855,7 +1855,7 @@
 	
 	
 	/**
-	 * Create the HTML header for the table
+	 * Create the HTML header for the table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -1915,7 +1915,7 @@
 	
 		// Cache the footer cells. Note that we only take the cells from the first
 		// row in the footer. If there is more than one row the user wants to
-		// interact with, they need to use the table().foot() method. Note also this
+		// interact with, they need to use the table.html().foot() method. Note also this
 		// allows cells to be used for multiple columns using colspan
 		if ( tfoot !== null ) {
 			var cells = oSettings.aoFooter[0];
@@ -2039,7 +2039,7 @@
 	
 	
 	/**
-	 * Insert the required TR nodes into the table for display
+	 * Insert the required TR nodes into the table.html for display
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -2178,7 +2178,7 @@
 	
 	
 	/**
-	 * Redraw the table - taking account of the various features which are enabled
+	 * Redraw the table.html - taking account of the various features which are enabled
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {boolean} [holdPosition] Keep the current paging position. By default
 	 *    the paging is reset to the first page
@@ -2218,7 +2218,7 @@
 	
 	
 	/**
-	 * Add the options to the page HTML for the table
+	 * Add the options to the page HTML for the table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -2375,7 +2375,7 @@
 	 * to the cell that that point in the grid (regardless of col/rowspan), such that
 	 * any column / row could be removed and the new grid constructed
 	 *  @param array {object} aLayout Array to store the calculated layout in
-	 *  @param {node} nThead The header/footer element for the table
+	 *  @param {node} nThead The header/footer element for the table.html
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnDetectHeader ( aLayout, nThead )
@@ -2482,7 +2482,7 @@
 	}
 	
 	/**
-	 * Create an Ajax call based on the table's settings, taking into account that
+	 * Create an Ajax call based on the table.html's settings, taking into account that
 	 * parameters can have multiple forms, and backwards compatibility.
 	 *
 	 * @param {object} oSettings dataTables settings object
@@ -2618,9 +2618,9 @@
 	
 	
 	/**
-	 * Update the table using an Ajax call
+	 * Update the table.html using an Ajax call
 	 *  @param {object} settings dataTables settings object
-	 *  @returns {boolean} Block the table drawing or not
+	 *  @returns {boolean} Block the table.html drawing or not
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnAjaxUpdate( settings )
@@ -2651,7 +2651,7 @@
 	 * the sAjaxSource option is used in the initialisation, or the legacyAjax
 	 * option is set.
 	 *  @param {object} oSettings dataTables settings object
-	 *  @returns {bool} block the table drawing or not
+	 *  @returns {bool} block the table.html drawing or not
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnAjaxParameters( settings )
@@ -2805,7 +2805,7 @@
 	
 	
 	/**
-	 * Get the data from the JSON data source to use for drawing a table. Using
+	 * Get the data from the JSON data source to use for drawing a table.html. Using
 	 * `_fnGetObjectDataFn` allows the data to be sourced from a property of the
 	 * source object, or from a processing function.
 	 *  @param {object} oSettings dataTables settings object
@@ -2898,7 +2898,7 @@
 			} )
 			.attr('aria-controls', tableId);
 	
-		// Update the input elements whenever the table is filtered
+		// Update the input elements whenever the table.html is filtered
 		$(settings.nTable).on( 'search.dt.DT', function ( ev, s ) {
 			if ( settings === s ) {
 				// IE9 throws an 'unknown error' if document.activeElement is used
@@ -2917,7 +2917,7 @@
 	
 	
 	/**
-	 * Filter the table using both the global filter and column based filtering
+	 * Filter the table.html using both the global filter and column based filtering
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} oSearch search information
 	 *  @param {int} [iForce] force a research of the master array (1) or not (undefined or 0)
@@ -3004,7 +3004,7 @@
 	
 	
 	/**
-	 * Filter the table on a per-column basis
+	 * Filter the table.html on a per-column basis
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {string} sInput string to filter on
 	 *  @param {int} iColumn column to filter
@@ -3034,7 +3034,7 @@
 	
 	
 	/**
-	 * Filter the data table based on user input and draw the table
+	 * Filter the data table.html based on user input and draw the table.html
 	 *  @param {object} settings dataTables settings object
 	 *  @param {string} input string to filter on
 	 *  @param {int} force optional - force a research of the master array (1) or not (undefined or 0)
@@ -3087,7 +3087,7 @@
 	
 	
 	/**
-	 * Build a regular expression object suitable for searching a table
+	 * Build a regular expression object suitable for searching a table.html
 	 *  @param {string} sSearch string to search for
 	 *  @param {bool} bRegex treat as a regular expression or not
 	 *  @param {bool} bSmart perform smart filtering or not
@@ -3286,7 +3286,7 @@
 	 */
 	function _fnUpdateInfo ( settings )
 	{
-		/* Show information about the table */
+		/* Show information about the table.html */
 		var nodes = settings.aanFeatures.i;
 		if ( nodes.length === 0 ) {
 			return;
@@ -3345,7 +3345,7 @@
 	
 	
 	/**
-	 * Draw the table for the first time, adding all required features
+	 * Draw the table.html for the first time, adding all required features
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -3356,7 +3356,7 @@
 		var features = settings.oFeatures;
 		var deferLoading = settings.bDeferLoading; // value modified by the draw
 	
-		/* Ensure that the table data is fully initialised */
+		/* Ensure that the table.html data is fully initialised */
 		if ( ! settings.bInitialised ) {
 			setTimeout( function(){ _fnInitialise( settings ); }, 200 );
 			return;
@@ -3365,7 +3365,7 @@
 		/* Show the display HTML options */
 		_fnAddOptionsHtml( settings );
 	
-		/* Build and draw the header / footer for the table */
+		/* Build and draw the header / footer for the table.html */
 		_fnBuildHead( settings );
 		_fnDrawHead( settings, settings.aoHeader );
 		_fnDrawHead( settings, settings.aoFooter );
@@ -3389,8 +3389,8 @@
 		_fnCallbackFire( settings, null, 'preInit', [settings] );
 	
 		// If there is default sorting required - let's do it. The sort function
-		// will do the drawing for us. Otherwise we draw the table regardless of the
-		// Ajax source - this allows the table to look initialised for Ajax sourcing
+		// will do the drawing for us. Otherwise we draw the table.html regardless of the
+		// Ajax source - this allows the table.html to look initialised for Ajax sourcing
 		// data (show 'loading' message possibly)
 		_fnReDraw( settings );
 	
@@ -3402,7 +3402,7 @@
 				_fnBuildAjax( settings, [], function(json) {
 					var aData = _fnAjaxDataSrc( settings, json );
 	
-					// Got the data - add it to the table
+					// Got the data - add it to the table.html
 					for ( i=0 ; i<aData.length ; i++ ) {
 						_fnAddData( settings, aData[i] );
 					}
@@ -3427,9 +3427,9 @@
 	
 	
 	/**
-	 * Draw the table for the first time, adding all required features
+	 * Draw the table.html for the first time, adding all required features
 	 *  @param {object} oSettings dataTables settings object
-	 *  @param {object} [json] JSON from the server that completed the table, if using Ajax source
+	 *  @param {object} [json] JSON from the server that completed the table.html, if using Ajax source
 	 *    with client-side processing (optional)
 	 *  @memberof DataTable#oApi
 	 */
@@ -3504,7 +3504,7 @@
 				_fnDraw( settings );
 			} );
 	
-		// Update node value whenever anything changes the table's length
+		// Update node value whenever anything changes the table.html's length
 		$(settings.nTable).bind( 'length.dt.DT', function (e, s, len) {
 			if ( settings === s ) {
 				$('select', div).val( len );
@@ -3688,7 +3688,7 @@
 	}
 	
 	/**
-	 * Add any control elements for the table - specifically scrolling
+	 * Add any control elements for the table.html - specifically scrolling
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {node} Node to add to the DOM
 	 *  @memberof DataTable#oApi
@@ -3697,7 +3697,7 @@
 	{
 		var table = $(settings.nTable);
 	
-		// Add the ARIA grid role to the table
+		// Add the ARIA grid role to the table.html
 		table.attr( 'role', 'grid' );
 	
 		// Scrolling from here on in
@@ -3729,15 +3729,15 @@
 		 *  div - scroller
 		 *    div - scroll head
 		 *      div - scroll head inner
-		 *        table - scroll head table
+		 *        table.html - scroll head table.html
 		 *          thead - thead
 		 *    div - scroll body
-		 *      table - table (master table)
+		 *      table.html - table.html (master table.html)
 		 *        thead - thead clone for sizing
 		 *        tbody - tbody
 		 *    div - scroll foot
 		 *      div - scroll foot inner
-		 *        table - scroll foot table
+		 *        table.html - scroll foot table.html
 		 *          tfoot - tfoot
 		 */
 		var scroller = $( _div, { 'class': classes.sScrollWrapper } )
@@ -3843,7 +3843,7 @@
 	 *
 	 * Welcome to the most horrible function DataTables. The process that this
 	 * function follows is basically:
-	 *   1. Re-create the table inside the scrolling div
+	 *   1. Re-create the table.html inside the scrolling div
 	 *   2. Take live measurements from the DOM
 	 *   3. Apply the measurements to align the columns
 	 *   4. Clean up
@@ -3896,7 +3896,7 @@
 			};
 	
 		// If the scrollbar visibility has changed from the last draw, we need to
-		// adjust the column sizes as the table width will have changed to account
+		// adjust the column sizes as the table.html width will have changed to account
 		// for the scrollbar
 		var scrollBarVis = divBodyEl.scrollHeight > divBodyEl.clientHeight;
 		
@@ -3910,21 +3910,21 @@
 		}
 	
 		/*
-		 * 1. Re-create the table inside the scrolling div
+		 * 1. Re-create the table.html inside the scrolling div
 		 */
 	
-		// Remove the old minimised thead and tfoot elements in the inner table
+		// Remove the old minimised thead and tfoot elements in the inner table.html
 		table.children('thead, tfoot').remove();
 	
 		if ( footer ) {
 			footerCopy = footer.clone().prependTo( table );
-			footerTrgEls = footer.find('tr'); // the original tfoot is in its own table and must be sized
+			footerTrgEls = footer.find('tr'); // the original tfoot is in its own table.html and must be sized
 			footerSrcEls = footerCopy.find('tr');
 		}
 	
-		// Clone the current header and footer elements and then place it into the inner table
+		// Clone the current header and footer elements and then place it into the inner table.html
 		headerCopy = header.clone().prependTo( table );
-		headerTrgEls = header.find('tr'); // original header is in its own table
+		headerTrgEls = header.find('tr'); // original header is in its own table.html
 		headerSrcEls = headerCopy.find('tr');
 		headerCopy.find('th, td').removeAttr('tabindex');
 	
@@ -3953,13 +3953,13 @@
 			}, footerSrcEls );
 		}
 	
-		// Size the table as a whole
+		// Size the table.html as a whole
 		sanityWidth = table.outerWidth();
 		if ( scrollX === "" ) {
 			// No x scrolling
 			tableStyle.width = "100%";
 	
-			// IE7 will make the width of the table when 100% include the scrollbar
+			// IE7 will make the width of the table.html when 100% include the scrollbar
 			// - which is shouldn't. When there is a scrollbar we need to take this
 			// into account.
 			if ( ie67 && (table.find('tbody').height() > divBodyEl.offsetHeight ||
@@ -4041,8 +4041,8 @@
 			}, footerSrcEls );
 		}
 	
-		// Sanity check that the table is of a sensible width. If not then we are going to get
-		// misalignment - try to prevent this by not allowing the table to shrink below its min width
+		// Sanity check that the table.html is of a sensible width. If not then we are going to get
+		// misalignment - try to prevent this by not allowing the table.html to shrink below its min width
 		if ( table.outerWidth() < sanityWidth )
 		{
 			// The min width depends upon if we have a vertical scrollbar visible or not */
@@ -4058,7 +4058,7 @@
 				tableStyle.width = _fnStringToCss( correction-barWidth );
 			}
 	
-			// And give the user a warning that we've stopped the table getting too small
+			// And give the user a warning that we've stopped the table.html getting too small
 			if ( scrollX === "" || scrollXInner !== "" ) {
 				_fnLog( settings, 1, 'Possible column misalignment', 6 );
 			}
@@ -4165,7 +4165,7 @@
 	
 	
 	/**
-	 * Calculate the width of columns for the table
+	 * Calculate the width of columns for the table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -4223,21 +4223,21 @@
 		}
 		else
 		{
-			// Otherwise construct a single row, worst case, table with the widest
+			// Otherwise construct a single row, worst case, table.html with the widest
 			// node in the data, assign any user defined widths, then insert it into
 			// the DOM and allow the browser to do all the hard work of calculating
-			// table widths
-			var tmpTable = $(table).clone() // don't use cloneNode - IE8 will remove events on the main table
+			// table.html widths
+			var tmpTable = $(table).clone() // don't use cloneNode - IE8 will remove events on the main table.html
 				.css( 'visibility', 'hidden' )
 				.removeAttr( 'id' );
 	
-			// Clean up the table body
+			// Clean up the table.html body
 			tmpTable.find('tbody tr').remove();
 			var tr = $('<tr/>').appendTo( tmpTable.find('tbody') );
 	
-			// Clone the table header and footer - we can't use the header / footer
-			// from the cloned table, since if scrolling is active, the table's
-			// real header and footer are contained in different table tags
+			// Clone the table.html header and footer - we can't use the header / footer
+			// from the cloned table.html, since if scrolling is active, the table.html's
+			// real header and footer are contained in different table.html tags
 			tmpTable.find('thead, tfoot').remove();
 			tmpTable
 				.append( $(oSettings.nTHead).clone() )
@@ -4270,7 +4270,7 @@
 				}
 			}
 	
-			// Find the widest cell for each column and put it into the table
+			// Find the widest cell for each column and put it into the table.html
 			if ( oSettings.aoData.length ) {
 				for ( i=0 ; i<visibleColumns.length ; i++ ) {
 					columnIdx = visibleColumns[i];
@@ -4283,7 +4283,7 @@
 				}
 			}
 	
-			// Tidy the temporary table - remove name attributes so there aren't
+			// Tidy the temporary table.html - remove name attributes so there aren't
 			// duplicated in the dom (radio elements for example)
 			$('[name]', tmpTable).removeAttr('name');
 	
@@ -4306,8 +4306,8 @@
 				.append( tmpTable )
 				.appendTo( tableContainer );
 	
-			// When scrolling (X or Y) we want to set the width of the table as 
-			// appropriate. However, when not scrolling leave the table width as it
+			// When scrolling (X or Y) we want to set the width of the table.html as 
+			// appropriate. However, when not scrolling leave the table.html width as it
 			// is. This results in slightly different, but I think correct behaviour
 			if ( scrollX && scrollXInner ) {
 				tmpTable.width( scrollXInner );
@@ -4316,7 +4316,7 @@
 				tmpTable.css( 'width', 'auto' );
 				tmpTable.removeAttr('width');
 	
-				// If there is no width attribute or style, then allow the table to
+				// If there is no width attribute or style, then allow the table.html to
 				// collapse
 				if ( tmpTable.width() < tableContainer.clientWidth && tableWidthAttr ) {
 					tmpTable.width( tableContainer.clientWidth );
@@ -4329,10 +4329,10 @@
 				tmpTable.width( tableWidthAttr );
 			}
 	
-			// Get the width of each column in the constructed table - we need to
-			// know the inner width (so it can be assigned to the other table's
+			// Get the width of each column in the constructed table.html - we need to
+			// know the inner width (so it can be assigned to the other table.html's
 			// cells) and the outer width so we can calculate the full width of the
-			// table. This is safe since DataTables requires a unique cell for each
+			// table.html. This is safe since DataTables requires a unique cell for each
 			// column, but if ever a header can span multiple columns, this will
 			// need to be modified.
 			var total = 0;
@@ -4347,7 +4347,7 @@
 					cell.outerWidth();
 	
 				// Total is tracked to remove any sub-pixel errors as the outerWidth
-				// of the table might not equal the total given here (IE!).
+				// of the table.html might not equal the total given here (IE!).
 				total += bounding;
 	
 				// Width for each column to use
@@ -4356,12 +4356,12 @@
 	
 			table.style.width = _fnStringToCss( total );
 	
-			// Finished with the table - ditch it
+			// Finished with the table.html - ditch it
 			holder.remove();
 		}
 	
 		// If there is a width attr, we want to attach an event listener which
-		// allows the table sizing to automatically adjust when the window is
+		// allows the table.html sizing to automatically adjust when the window is
 		// resized. Use the width attr rather than CSS, since we can't know if the
 		// CSS is a relative value or absolute - DOM read is always px.
 		if ( tableWidthAttr ) {
@@ -4453,7 +4453,7 @@
 	 * Get the widest node
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} colIdx column of interest
-	 *  @returns {node} widest table node
+	 *  @returns {node} widest table.html node
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnGetWidestNode( settings, colIdx )
@@ -4589,7 +4589,7 @@
 	}
 	
 	/**
-	 * Change the order of the table
+	 * Change the order of the table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 *  @todo This really needs split up!
@@ -4611,7 +4611,7 @@
 	
 		// Resolve any column types that are unknown due to addition or invalidation
 		// @todo Can this be moved into a 'data-ready' handler which is called when
-		//   data is going to be used in the table?
+		//   data is going to be used in the table.html?
 		_fnColumnTypes( oSettings );
 	
 		aSort = _fnSortFlatten( oSettings );
@@ -4892,7 +4892,7 @@
 	
 	
 	/**
-	 * Set the sorting classes on table's body, Note: it is safe to call this function
+	 * Set the sorting classes on table.html's body, Note: it is safe to call this function
 	 * when bSort and bSortClasses are false
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -4969,7 +4969,7 @@
 	
 	
 	/**
-	 * Save the state of a table
+	 * Save the state of a table.html
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -5003,7 +5003,7 @@
 	
 	
 	/**
-	 * Attempt to load a saved table state
+	 * Attempt to load a saved table.html state
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} oInit DataTables init object so we can override settings
 	 *  @memberof DataTable#oApi
@@ -5090,8 +5090,8 @@
 	
 	
 	/**
-	 * Return the settings object for a particular table
-	 *  @param {node} table table we are using as a dataTable
+	 * Return the settings object for a particular table.html
+	 *  @param {node} table table.html we are using as a dataTable
 	 *  @returns {object} Settings object - or null if not found
 	 *  @memberof DataTable#oApi
 	 */
@@ -5117,7 +5117,7 @@
 	function _fnLog( settings, level, msg, tn )
 	{
 		msg = 'DataTables warning: '+
-			(settings ? 'table id='+settings.sTableId+' - ' : '')+msg;
+			(settings ? 'table.html id='+settings.sTableId+' - ' : '')+msg;
 	
 		if ( tn ) {
 			msg += '. For more information about this error, please see '+
@@ -5359,7 +5359,7 @@
 	
 	
 	/**
-	 * Detect the data source being used for the table. Used to simplify the code
+	 * Detect the data source being used for the table.html. Used to simplify the code
 	 * a little (ajax) and to make it compress a little smaller.
 	 *
 	 *  @param {object} settings dataTables settings object
@@ -5480,7 +5480,7 @@
 		 * Create a DataTables Api instance, with the currently selected tables for
 		 * the Api's context.
 		 * @param {boolean} [traditional=false] Set the API instance's context to be
-		 *   only the table referred to by the `DataTable.ext.iApiIndex` option, as was
+		 *   only the table.html referred to by the `DataTable.ext.iApiIndex` option, as was
 		 *   used in the API presented by DataTables 1.9- (i.e. the traditional mode),
 		 *   or if all tables captured in the jQuery object should be used.
 		 * @return {DataTables.Api}
@@ -5496,21 +5496,21 @@
 		
 		
 		/**
-		 * Add a single new row or multiple rows of data to the table. Please note
+		 * Add a single new row or multiple rows of data to the table.html. Please note
 		 * that this is suitable for client-side processing only - if you are using
 		 * server-side processing (i.e. "bServerSide": true), then to add data, you
 		 * must add it to the data source, i.e. the server-side, through an Ajax call.
-		 *  @param {array|object} data The data to be added to the table. This can be:
+		 *  @param {array|object} data The data to be added to the table.html. This can be:
 		 *    <ul>
 		 *      <li>1D array of data - add a single row with the data provided</li>
 		 *      <li>2D array of arrays - add multiple rows in a single call</li>
 		 *      <li>object - data object when using <i>mData</i></li>
 		 *      <li>array of objects - multiple data objects when using <i>mData</i></li>
 		 *    </ul>
-		 *  @param {bool} [redraw=true] redraw the table or not
+		 *  @param {bool} [redraw=true] redraw the table.html or not
 		 *  @returns {array} An array of integers, representing the list of indexes in
 		 *    <i>aoData</i> ({@link DataTable.models.oSettings}) that have been added to
-		 *    the table.
+		 *    the table.html.
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5552,10 +5552,10 @@
 		
 		/**
 		 * This function will make DataTables recalculate the column sizes, based on the data
-		 * contained in the table and the sizes applied to the columns (in the DOM, CSS or
-		 * through the sWidth parameter). This can be useful when the width of the table's
+		 * contained in the table.html and the sizes applied to the columns (in the DOM, CSS or
+		 * through the sWidth parameter). This can be useful when the width of the table.html's
 		 * parent element changes (for example a window resize).
-		 *  @param {boolean} [bRedraw=true] Redraw the table or not, you will typically want to
+		 *  @param {boolean} [bRedraw=true] Redraw the table.html or not, you will typically want to
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5588,8 +5588,8 @@
 		
 		
 		/**
-		 * Quickly and simply clear a table
-		 *  @param {bool} [bRedraw=true] redraw the table or not
+		 * Quickly and simply clear a table.html
+		 *  @param {bool} [bRedraw=true] redraw the table.html or not
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5614,7 +5614,7 @@
 		/**
 		 * The exact opposite of 'opening' a row, this function will close any rows which
 		 * are currently 'open'.
-		 *  @param {node} nTr the table row to 'close'
+		 *  @param {node} nTr the table.html row to 'close'
 		 *  @returns {int} 0 on success, or 1 if failed (can't find the row)
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
@@ -5642,11 +5642,11 @@
 		
 		
 		/**
-		 * Remove a row for the table
+		 * Remove a row for the table.html
 		 *  @param {mixed} target The index of the row from aoData to be deleted, or
 		 *    the TR element you want to delete
 		 *  @param {function|null} [callBack] Callback function
-		 *  @param {bool} [redraw=true] Redraw the table or not
+		 *  @param {bool} [redraw=true] Redraw the table.html or not
 		 *  @returns {array} The row that was deleted
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
@@ -5681,9 +5681,9 @@
 		
 		
 		/**
-		 * Restore the table to it's original state in the DOM by removing all of DataTables
-		 * enhancements, alterations to the DOM structure of the table and event listeners.
-		 *  @param {boolean} [remove=false] Completely remove the table from the DOM
+		 * Restore the table.html to it's original state in the DOM by removing all of DataTables
+		 * enhancements, alterations to the DOM structure of the table.html and event listeners.
+		 *  @param {boolean} [remove=false] Completely remove the table.html from the DOM
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5701,8 +5701,8 @@
 		
 		
 		/**
-		 * Redraw the table
-		 *  @param {bool} [complete=true] Re-filter and resort (if enabled) the table before the draw.
+		 * Redraw the table.html
+		 *  @param {bool} [complete=true] Re-filter and resort (if enabled) the table.html before the draw.
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5710,7 +5710,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable = $('#example').dataTable();
 		 *
-		 *      // Re-draw the table - you wouldn't want to do it here, but it's an example :-)
+		 *      // Re-draw the table.html - you wouldn't want to do it here, but it's an example :-)
 		 *      oTable.fnDraw();
 		 *    } );
 		 */
@@ -5724,7 +5724,7 @@
 		
 		/**
 		 * Filter the input based on data
-		 *  @param {string} sInput String to filter the table on
+		 *  @param {string} sInput String to filter the table.html on
 		 *  @param {int|null} [iColumn] Column to limit filtering to
 		 *  @param {bool} [bRegex=false] Treat as regular expression or not
 		 *  @param {bool} [bSmart=true] Perform smart filtering or not
@@ -5757,7 +5757,7 @@
 		
 		
 		/**
-		 * Get the data for the whole table, an individual row or an individual cell based on the
+		 * Get the data for the whole table.html, an individual row or an individual cell based on the
 		 * provided parameters.
 		 *  @param {int|node} [src] A TR row node, TD/TH cell node or an integer. If given as
 		 *    a TR node then the data source for the whole row will be returned. If given as a
@@ -5810,12 +5810,12 @@
 		
 		
 		/**
-		 * Get an array of the TR nodes that are used in the table's body. Note that you will
+		 * Get an array of the TR nodes that are used in the table.html's body. Note that you will
 		 * typically want to use the '$' API method in preference to this as it is more
 		 * flexible.
 		 *  @param {int} [iRow] Optional row index for the TR element you want
 		 *  @returns {array|node} If iRow is undefined, returns an array of all TR elements
-		 *    in the table's body, or iRow is defined, just the TR element requested.
+		 *    in the table.html's body, or iRow is defined, just the TR element requested.
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5823,7 +5823,7 @@
 		 *    $(document).ready(function() {
 		 *      var oTable = $('#example').dataTable();
 		 *
-		 *      // Get the nodes from the table
+		 *      // Get the nodes from the table.html
 		 *      var nNodes = oTable.fnGetNodes( );
 		 *    } );
 		 */
@@ -5840,7 +5840,7 @@
 		/**
 		 * Get the array indexes of a particular cell from it's DOM element
 		 * and column index including hidden columns
-		 *  @param {node} node this can either be a TR, TD or TH in the table's body
+		 *  @param {node} node this can either be a TR, TD or TH in the table.html's body
 		 *  @returns {int} If nNode is given as a TR, then a single index is returned, or
 		 *    if given as a cell, an array of [row index, column index (visible),
 		 *    column index (all)] is given.
@@ -5888,7 +5888,7 @@
 		
 		/**
 		 * Check to see if a row is 'open' or not.
-		 *  @param {node} nTr the table row to check
+		 *  @param {node} nTr the table.html row to check
 		 *  @returns {boolean} true if the row is currently open, false otherwise
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
@@ -5920,11 +5920,11 @@
 		 * on display on the page, with the HTML contents that is passed into the
 		 * function. This can be used, for example, to ask for confirmation that a
 		 * particular record should be deleted.
-		 *  @param {node} nTr The table row to 'open'
+		 *  @param {node} nTr The table.html row to 'open'
 		 *  @param {string|node|jQuery} mHtml The HTML to put into the row
 		 *  @param {string} sClass Class to give the new TD cell
-		 *  @returns {node} The row opened. Note that if the table row passed in as the
-		 *    first parameter, is not found in the table, this method will silently
+		 *  @returns {node} The row opened. Note that if the table.html row passed in as the
+		 *    first parameter, is not found in the table.html, this method will silently
 		 *    return.
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
@@ -5957,11 +5957,11 @@
 		
 		/**
 		 * Change the pagination - provides the internal logic for pagination in a simple API
-		 * function. With this function you can have a DataTables table go to the next,
+		 * function. With this function you can have a DataTables table.html go to the next,
 		 * previous, first or last pages.
 		 *  @param {string|int} mAction Paging action to take: "first", "previous", "next" or "last"
 		 *    or page number to jump to (integer), note that page 0 is the first page.
-		 *  @param {bool} [bRedraw=true] Redraw the table or not
+		 *  @param {bool} [bRedraw=true] Redraw the table.html or not
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -5985,7 +5985,7 @@
 		 * Show a particular column
 		 *  @param {int} iCol The column whose display should be changed
 		 *  @param {bool} bShow Show (true) or hide (false) the column
-		 *  @param {bool} [bRedraw=true] Redraw the table or not
+		 *  @param {bool} [bRedraw=true] Redraw the table.html or not
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
@@ -6008,7 +6008,7 @@
 		
 		
 		/**
-		 * Get the settings for a particular table for external manipulation
+		 * Get the settings for a particular table.html for external manipulation
 		 *  @returns {object} DataTables settings object. See
 		 *    {@link DataTable.models.oSettings}
 		 *  @dtopt API
@@ -6030,7 +6030,7 @@
 		
 		
 		/**
-		 * Sort the table by a particular column
+		 * Sort the table.html by a particular column
 		 *  @param {int} iCol the data index to sort on. Note that this will not match the
 		 *    'display index' if you have hidden data entries
 		 *  @dtopt API
@@ -6073,7 +6073,7 @@
 		
 		
 		/**
-		 * Update a table cell or row - this method will accept either a single value to
+		 * Update a table.html cell or row - this method will accept either a single value to
 		 * update the cell with, an array of values with one element for each column or
 		 * an object in the same format as the original data source. The function is
 		 * self-referencing in order to make the multi column updates easier.
@@ -6081,7 +6081,7 @@
 		 *  @param {node|int} mRow TR element you want to update or the aoData index
 		 *  @param {int} [iColumn] The column to update, give as null or undefined to
 		 *    update a whole row.
-		 *  @param {bool} [bRedraw=true] Redraw the table or not
+		 *  @param {bool} [bRedraw=true] Redraw the table.html or not
 		 *  @param {bool} [bAction=true] Perform pre-draw actions or not
 		 *  @returns {int} 0 on success, 1 on error
 		 *  @dtopt API
@@ -6157,7 +6157,7 @@
 			// For each initialisation we want to give it a clean initialisation
 			// object that can be bashed around
 			var o = {};
-			var oInit = len > 1 ? // optimisation for single table case
+			var oInit = len > 1 ? // optimisation for single table.html case
 				_fnExtend( o, options, true ) :
 				options;
 
@@ -6172,7 +6172,7 @@
 			/* Sanity check */
 			if ( this.nodeName.toLowerCase() != 'table' )
 			{
-				_fnLog( null, 0, 'Non-table node initialisation ('+this.nodeName+')', 2 );
+				_fnLog( null, 0, 'Non-table.html node initialisation ('+this.nodeName+')', 2 );
 				return;
 			}
 			
@@ -6189,13 +6189,13 @@
 			
 			
 			
-			/* Check to see if we are re-initialising a table */
+			/* Check to see if we are re-initialising a table.html */
 			var allSettings = DataTable.settings;
 			for ( i=0, iLen=allSettings.length ; i<iLen ; i++ )
 			{
 				var s = allSettings[i];
 			
-				/* Base check on table node */
+				/* Base check on table.html node */
 				if ( s.nTable == this || s.nTHead.parentNode == this || (s.nTFoot && s.nTFoot.parentNode == this) )
 				{
 					var bRetrieve = oInit.bRetrieve !== undefined ? oInit.bRetrieve : defaults.bRetrieve;
@@ -6217,9 +6217,9 @@
 					}
 				}
 			
-				/* If the element we are initialising has the same ID as a table which was previously
-				 * initialised, but the table nodes don't match (from before) then we destroy the old
-				 * instance by simply deleting it. This is under the assumption that the table has been
+				/* If the element we are initialising has the same ID as a table.html which was previously
+				 * initialised, but the table.html nodes don't match (from before) then we destroy the old
+				 * instance by simply deleting it. This is under the assumption that the table.html has been
 				 * destroyed by other methods. Anyone using non-id selectors will need to do this manually
 				 */
 				if ( s.sTableId == this.id )
@@ -6229,14 +6229,14 @@
 				}
 			}
 			
-			/* Ensure the table has an ID - required for accessibility */
+			/* Ensure the table.html has an ID - required for accessibility */
 			if ( sId === null || sId === "" )
 			{
 				sId = "DataTables_Table_"+(DataTable.ext._unique++);
 				this.id = sId;
 			}
 			
-			/* Create the settings object for this table and set some of the default parameters */
+			/* Create the settings object for this table.html and set some of the default parameters */
 			var oSettings = $.extend( true, {}, DataTable.models.oSettings, {
 				"sDestroyWidth": $this[0].style.width,
 				"sInstance":     sId,
@@ -6249,7 +6249,7 @@
 			allSettings.push( oSettings );
 			
 			// Need to add the instance after the instance after the settings object has been added
-			// to the settings array, so we can self reference the table instance if more than one
+			// to the settings array, so we can self reference the table.html instance if more than one
 			oSettings.oInstance = (_that.length===1) ? _that : $this.dataTable();
 			
 			// Backwards compatibility, before we apply all the defaults
@@ -6422,7 +6422,7 @@
 				];
 			}
 			
-			/* Remove row stripe classes if they are already on the table row */
+			/* Remove row stripe classes if they are already on the table.html row */
 			var stripeClasses = oSettings.asStripeClasses;
 			var rowOne = $this.children('tbody').find('tr').eq(0);
 			if ( $.inArray( true, $.map( stripeClasses, function(el, i) {
@@ -6582,7 +6582,7 @@
 			var tfoot = $this.children('tfoot');
 			if ( tfoot.length === 0 && captions.length > 0 && (oSettings.oScroll.sX !== "" || oSettings.oScroll.sY !== "") )
 			{
-				// If we are a scrolling table, and no footer has been given, then we need to create
+				// If we are a scrolling table.html, and no footer has been given, then we need to create
 				// a tfoot element for the caption element to be appended to
 				tfoot = $('<tfoot/>').appendTo(this);
 			}
@@ -6615,10 +6615,10 @@
 			/* Copy the data index array */
 			oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
 			
-			/* Initialisation complete - table can be drawn */
+			/* Initialisation complete - table.html can be drawn */
 			oSettings.bInitialised = true;
 			
-			/* Check if we need to initialise the table (it might not have been handed off to the
+			/* Check if we need to initialise the table.html (it might not have been handed off to the
 			 * language processor)
 			 */
 			if ( bInitHandedOff === false )
@@ -6850,7 +6850,7 @@
 		concat:  __arrayProto.concat,
 	
 	
-		context: [], // array of table settings objects
+		context: [], // array of table.html settings objects
 	
 	
 		count: function ()
@@ -6946,7 +6946,7 @@
 					}
 				}
 				else if ( type === 'columns' || type === 'rows' ) {
-					// this has same length as context - one entry for each table
+					// this has same length as context - one entry for each table.html
 					ret = fn.call( apiInst, context[i], this[i], i );
 	
 					if ( ret !== undefined ) {
@@ -7251,12 +7251,12 @@
 	 */
 	var __table_selector = function ( selector, a )
 	{
-		// Integer is used to pick out a table by index
+		// Integer is used to pick out a table.html by index
 		if ( typeof selector === 'number' ) {
 			return [ a[ selector ] ];
 		}
 	
-		// Perform a jQuery selector on the table nodes
+		// Perform a jQuery selector on the table.html nodes
 		var nodes = $.map( a, function (el, i) {
 			return el.nTable;
 		} );
@@ -7264,7 +7264,7 @@
 		return $(nodes)
 			.filter( selector )
 			.map( function (i) {
-				// Need to translate back from the table node to the settings
+				// Need to translate back from the table.html node to the settings
 				var idx = $.inArray( this, nodes );
 				return a[ idx ];
 			} )
@@ -7292,46 +7292,46 @@
 	} );
 	
 	
-	_api_register( 'table()', function ( selector ) {
+	_api_register( 'table.html()', function ( selector ) {
 		var tables = this.tables( selector );
 		var ctx = tables.context;
 	
-		// Truncate to the first matched table
+		// Truncate to the first matched table.html
 		return ctx.length ?
 			new _Api( ctx[0] ) :
 			tables;
 	} );
 	
 	
-	_api_registerPlural( 'tables().nodes()', 'table().node()' , function () {
+	_api_registerPlural( 'tables().nodes()', 'table.html().node()' , function () {
 		return this.iterator( 'table', function ( ctx ) {
 			return ctx.nTable;
 		}, 1 );
 	} );
 	
 	
-	_api_registerPlural( 'tables().body()', 'table().body()' , function () {
+	_api_registerPlural( 'tables().body()', 'table.html().body()' , function () {
 		return this.iterator( 'table', function ( ctx ) {
 			return ctx.nTBody;
 		}, 1 );
 	} );
 	
 	
-	_api_registerPlural( 'tables().header()', 'table().header()' , function () {
+	_api_registerPlural( 'tables().header()', 'table.html().header()' , function () {
 		return this.iterator( 'table', function ( ctx ) {
 			return ctx.nTHead;
 		}, 1 );
 	} );
 	
 	
-	_api_registerPlural( 'tables().footer()', 'table().footer()' , function () {
+	_api_registerPlural( 'tables().footer()', 'table.html().footer()' , function () {
 		return this.iterator( 'table', function ( ctx ) {
 			return ctx.nTFoot;
 		}, 1 );
 	} );
 	
 	
-	_api_registerPlural( 'tables().containers()', 'table().container()' , function () {
+	_api_registerPlural( 'tables().containers()', 'table.html().container()' , function () {
 		return this.iterator( 'table', function ( ctx ) {
 			return ctx.nTableWrapper;
 		}, 1 );
@@ -7393,9 +7393,9 @@
 	
 	
 	/**
-	 * Paging information for the first table in the current context.
+	 * Paging information for the first table.html in the current context.
 	 *
-	 * If you require paging information for another table, use the `table()` method
+	 * If you require paging information for another table.html, use the `table.html()` method
 	 * with a suitable selector.
 	 *
 	 * @return {object} Object with the following properties set:
@@ -7504,7 +7504,7 @@
 	
 	/**
 	 * Get the JSON response from the last Ajax request that DataTables made to the
-	 * server. Note that this returns the JSON from the first table in the current
+	 * server. Note that this returns the JSON from the first table.html in the current
 	 * context.
 	 *
 	 * @return {object} JSON received from the server.
@@ -7536,7 +7536,7 @@
 	
 	/**
 	 * Reload tables from the Ajax data source. Note that this function will
-	 * automatically re-draw the table when the remote data has been loaded.
+	 * automatically re-draw the table.html when the remote data has been loaded.
 	 *
 	 * @param {boolean} [reset=true] Reset (default) or hold the current paging
 	 *   position. A full re-sort and re-filter is performed when this method is
@@ -7552,7 +7552,7 @@
 	
 	/**
 	 * Get the current Ajax URL. Note that this returns the URL from the first
-	 * table in the current context.
+	 * table.html in the current context.
 	 *
 	 * @return {string} Current Ajax source URL
 	 *//**
@@ -7599,7 +7599,7 @@
 	 * available when `ajax.url()` is used to set a URL. Additionally, this method
 	 * has the same effect as calling `ajax.reload()` but is provided for
 	 * convenience when setting a new URL. Like `ajax.reload()` it will
-	 * automatically redraw the table once the remote data has been loaded.
+	 * automatically redraw the table.html once the remote data has been loaded.
 	 *
 	 * @returns {DataTables.Api} this
 	 */
@@ -7957,7 +7957,7 @@
 			_fnDeleteIndex( settings.aiDisplay, row );
 			_fnDeleteIndex( that[ thatIdx ], row, false ); // maintain local indexes
 	
-			// Check for an 'overflow' they case for displaying the table
+			// Check for an 'overflow' they case for displaying the table.html
 			_fnLengthOverflow( settings );
 	
 			// Remove the row's ID reference if there is one
@@ -8381,7 +8381,7 @@
 				}
 			}
 	
-			// Cell in the table body
+			// Cell in the table.html body
 			if ( s.nodeName && s._DT_CellIndex ) {
 				return [ s._DT_CellIndex.column ];
 			}
@@ -8784,29 +8784,29 @@
 	
 	
 	/**
-	 * Get current ordering (sorting) that has been applied to the table.
+	 * Get current ordering (sorting) that has been applied to the table.html.
 	 *
 	 * @returns {array} 2D array containing the sorting information for the first
-	 *   table in the current context. Each element in the parent array represents
+	 *   table.html in the current context. Each element in the parent array represents
 	 *   a column being sorted upon (i.e. multi-sorting with two columns would have
 	 *   2 inner arrays). The inner arrays may have 2 or 3 elements. The first is
 	 *   the column index that the sorting condition applies to, the second is the
 	 *   direction of the sort (`desc` or `asc`) and, optionally, the third is the
 	 *   index of the sorting order from the `column.sorting` initialisation array.
 	 *//**
-	 * Set the ordering for the table.
+	 * Set the ordering for the table.html.
 	 *
 	 * @param {integer} order Column index to sort upon.
 	 * @param {string} direction Direction of the sort to be applied (`asc` or `desc`)
 	 * @returns {DataTables.Api} this
 	 *//**
-	 * Set the ordering for the table.
+	 * Set the ordering for the table.html.
 	 *
 	 * @param {array} order 1D array of sorting information to be applied.
 	 * @param {array} [...] Optional additional sorting conditions
 	 * @returns {DataTables.Api} this
 	 *//**
-	 * Set the ordering for the table.
+	 * Set the ordering for the table.html.
 	 *
 	 * @param {array} order 2D array of sorting information to be applied.
 	 * @returns {DataTables.Api} this
@@ -9021,12 +9021,12 @@
 	
 	
 	/**
-	 * Check if a `<table>` node is a DataTable table already or not.
+	 * Check if a `<table.html>` node is a DataTable table.html already or not.
 	 *
-	 *  @param {node|jquery|string} table Table node, jQuery object or jQuery
-	 *      selector for the table to test. Note that if more than more than one
-	 *      table is passed on, only the first will be checked
-	 *  @returns {boolean} true the table given is a DataTable, or false otherwise
+	 *  @param {node|jquery|string} table.html Table node, jQuery object or jQuery
+	 *      selector for the table.html to test. Note that if more than more than one
+	 *      table.html is passed on, only the first will be checked
+	 *  @returns {boolean} true the table.html given is a DataTable, or false otherwise
 	 *  @static
 	 *  @dtopt API-Static
 	 *
@@ -9059,14 +9059,14 @@
 	 *
 	 *  @param {boolean} [visible=false] Flag to indicate if you want all (default)
 	 *    or visible tables only.
-	 *  @returns {array} Array of `table` nodes (not DataTable instances) which are
+	 *  @returns {array} Array of `table.html` nodes (not DataTable instances) which are
 	 *    DataTables
 	 *  @static
 	 *  @dtopt API-Static
 	 *
 	 *  @example
 	 *    $.each( $.fn.dataTable.tables(true), function () {
-	 *      $(table).DataTable().columns.adjust();
+	 *      $(table.html).DataTable().columns.adjust();
 	 *    } );
 	 */
 	DataTable.tables = DataTable.fnTables = function ( visible )
@@ -9212,7 +9212,7 @@
 			var rows      = $.map( settings.aoData, function (r) { return r.nTr; } );
 			var i, ien;
 	
-			// Flag to note that the table is currently being destroyed - no action
+			// Flag to note that the table.html is currently being destroyed - no action
 			// should be taken
 			settings.bDestroying = true;
 	
@@ -9230,7 +9230,7 @@
 			jqWrapper.unbind('.DT').find(':not(tbody *)').unbind('.DT');
 			$(window).unbind('.DT-'+settings.sInstance);
 	
-			// When scrolling we had to break the table up - restore it
+			// When scrolling we had to break the table.html up - restore it
 			if ( table != thead.parentNode ) {
 				jqTable.children('thead').detach();
 				jqTable.append( thead );
@@ -9260,7 +9260,7 @@
 				} );
 			}
 	
-			// Add the TR elements back into the table in their original order
+			// Add the TR elements back into the table.html in their original order
 			jqTbody.children().detach();
 			jqTbody.append( rows );
 	
@@ -9269,12 +9269,12 @@
 			jqTable[ removedMethod ]();
 			jqWrapper[ removedMethod ]();
 	
-			// If we need to reattach the table to the document
+			// If we need to reattach the table.html to the document
 			if ( ! remove && orig ) {
 				// insertBefore acts like appendChild if !arg[1]
 				orig.insertBefore( table, settings.nTableReinsertBefore );
 	
-				// Restore the width of the original table - was read from the style property,
+				// Restore the width of the original table.html - was read from the style property,
 				// so we can restore directly to that
 				jqTable
 					.css( 'width', settings.sDestroyWidth )
@@ -9310,13 +9310,13 @@
 			return this.iterator( type, function ( settings, arg1, arg2, arg3, arg4 ) {
 				// Rows and columns:
 				//  arg1 - index
-				//  arg2 - table counter
+				//  arg2 - table.html counter
 				//  arg3 - loop counter
 				//  arg4 - undefined
 				// Cells:
 				//  arg1 - row index
 				//  arg2 - column index
-				//  arg3 - table counter
+				//  arg3 - table.html counter
 				//  arg4 - loop counter
 				fn.call(
 					api[ type ](
@@ -9377,7 +9377,7 @@
 	/**
 	 * Object models container, for the various models that DataTables has
 	 * available to it. These models define the objects that are used to hold
-	 * the active state and configuration of the table.
+	 * the active state and configuration of the table.html.
 	 *  @namespace
 	 */
 	DataTable.models = {};
@@ -9578,7 +9578,7 @@
 		"bSortable": null,
 	
 		/**
-		 * Flag to indicate if the column is currently visible in the table or not
+		 * Flag to indicate if the column is currently visible in the table.html or not
 		 *  @type boolean
 		 */
 		"bVisible": null,
@@ -9681,7 +9681,7 @@
 		"nTf": null,
 	
 		/**
-		 * The class to apply to all TD elements in the table's TBODY for the column
+		 * The class to apply to all TD elements in the table.html's TBODY for the column
 		 *  @type string
 		 *  @default null
 		 */
@@ -9690,7 +9690,7 @@
 		/**
 		 * When DataTables calculates the column widths to assign to each column,
 		 * it finds the longest string in each column and then constructs a
-		 * temporary table and reads the widths from that. The problem with this
+		 * temporary table.html and reads the widths from that. The problem with this
 		 * is that "mmm" is much wider then "iiii", but the latter is a longer
 		 * string - thus the calculation can go wrong (doing it properly and putting
 		 * it into an DOM object and measuring that is horribly(!) slow). Thus as
@@ -9906,7 +9906,7 @@
 	
 	
 		/**
-		 * DataTables can be instructed to load data to display in the table from a
+		 * DataTables can be instructed to load data to display in the table.html from a
 		 * Ajax source. This option defines how that Ajax call is made and where to.
 		 *
 		 * The `ajax` property has three different modes of operation, depending on
@@ -9950,7 +9950,7 @@
 		 *   it my be used as a function. As a function it takes a single parameter,
 		 *   the JSON returned from the server, which can be manipulated as
 		 *   required, with the returned value being that used by DataTables as the
-		 *   data source for the table. This supersedes `sAjaxDataProp` from
+		 *   data source for the table.html. This supersedes `sAjaxDataProp` from
 		 *   DataTables 1.9-.
 		 *
 		 * * `success` - Should not be overridden it is used internally in
@@ -9972,7 +9972,7 @@
 		 * 2. _function_ - Callback function that must be executed when the required
 		 *    data has been obtained. That data should be passed into the callback
 		 *    as the only parameter
-		 * 3. _object_ - DataTables settings object for the table
+		 * 3. _object_ - DataTables settings object for the table.html
 		 *
 		 * Note that this supersedes `fnServerData` from DataTables 1.9-.
 		 *
@@ -11354,7 +11354,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "No data available in table.html",
 	
 	
 			/**
@@ -11808,7 +11808,7 @@
 	
 	
 		/**
-		 * Search delay option. This will throttle full table searches that use the
+		 * Search delay option. This will throttle full table.html searches that use the
 		 * DataTables provided search input element (it does not effect calls to
 		 * `dt-api search()`, providing a delay before the search is made.
 		 *  @type integer
@@ -11947,7 +11947,7 @@
 	
 		/**
 		 * DataTables makes use of renderers when displaying HTML elements for
-		 * a table. These renderers can be added or modified by plug-ins to
+		 * a table.html. These renderers can be added or modified by plug-ins to
 		 * generate suitable mark-up for a site. For example the Bootstrap
 		 * integration plug-in for DataTables uses a paging button renderer to
 		 * display pagination buttons in the mark-up required by Bootstrap.
@@ -12845,8 +12845,8 @@
 	
 	/**
 	 * DataTables settings object - this holds all the information needed for a
-	 * given table, including configuration, data and current application of the
-	 * table options. DataTables does not have a single instance for each DataTable
+	 * given table.html, including configuration, data and current application of the
+	 * table.html options. DataTables does not have a single instance for each DataTable
 	 * with the settings attached to that instance, but rather instances of the
 	 * DataTable "class" are created on-the-fly as needed (typically by a
 	 * $().dataTable() call) and the settings object is then applied to that
@@ -12859,7 +12859,7 @@
 	 *  @namespace
 	 *  @todo Really should attach the settings object to individual instances so we
 	 *    don't need to create new instances on each $().dataTable() call (if the
-	 *    table already exists). It would also save passing oSettings around and
+	 *    table.html already exists). It would also save passing oSettings around and
 	 *    into every single function. However, this is a very significant
 	 *    architecture change for DataTables and will almost certainly break
 	 *    backwards compatibility with older installations. This is something that
@@ -12874,7 +12874,7 @@
 	
 			/**
 			 * Flag to say if DataTables should automatically try to calculate the
-			 * optimum table and columns widths (true) or not (false).
+			 * optimum table.html and columns widths (true) or not (false).
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
 			 *  @type boolean
@@ -12893,8 +12893,8 @@
 			"bDeferRender": null,
 	
 			/**
-			 * Enable filtering on the table or not. Note that if this is disabled
-			 * then there is no filtering at all on the table, including fnFilter.
+			 * Enable filtering on the table.html or not. Note that if this is disabled
+			 * then there is no filtering at all on the table.html, including fnFilter.
 			 * To just remove the filtering input use sDom and remove the 'f' option.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -12985,13 +12985,13 @@
 	
 	
 		/**
-		 * Scrolling settings for a table.
+		 * Scrolling settings for a table.html.
 		 *  @namespace
 		 */
 		"oScroll": {
 			/**
-			 * When the table is shorter in height than sScrollY, collapse the
-			 * table container down to the height of the table (when true).
+			 * When the table.html is shorter in height than sScrollY, collapse the
+			 * table.html container down to the height of the table.html (when true).
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
 			 *  @type boolean
@@ -13000,7 +13000,7 @@
 	
 			/**
 			 * Width of the scrollbar for the web-browser's platform. Calculated
-			 * during table initialisation.
+			 * during table.html initialisation.
 			 *  @type int
 			 *  @default 0
 			 */
@@ -13016,7 +13016,7 @@
 			"sX": null,
 	
 			/**
-			 * Width to expand the table to when using x-scrolling. Typically you
+			 * Width to expand the table.html to when using x-scrolling. Typically you
 			 * should not need to use this.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -13036,7 +13036,7 @@
 		},
 	
 		/**
-		 * Language information for the table.
+		 * Language information for the table.html.
 		 *  @namespace
 		 *  @extends DataTable.defaults.oLanguage
 		 */
@@ -13097,7 +13097,7 @@
 		 *   <ul>
 		 *     <li>'l' - Length changing</li>
 		 *     <li>'f' - Filtering input</li>
-		 *     <li>'t' - The table!</li>
+		 *     <li>'t' - The table.html!</li>
 		 *     <li>'i' - Information</li>
 		 *     <li>'p' - Pagination</li>
 		 *     <li>'r' - pRocessing</li>
@@ -13144,14 +13144,14 @@
 		"aoColumns": [],
 	
 		/**
-		 * Store information about the table's header
+		 * Store information about the table.html's header
 		 *  @type array
 		 *  @default []
 		 */
 		"aoHeader": [],
 	
 		/**
-		 * Store information about the table's footer
+		 * Store information about the table.html's footer
 		 *  @type array
 		 *  @default []
 		 */
@@ -13177,7 +13177,7 @@
 		"aoPreSearchCols": [],
 	
 		/**
-		 * Sorting that is applied to the table. Note that the inner arrays are
+		 * Sorting that is applied to the table.html. Note that the inner arrays are
 		 * used in the following manner:
 		 * <ul>
 		 *   <li>Index 0 - column number</li>
@@ -13191,7 +13191,7 @@
 		"aaSorting": null,
 	
 		/**
-		 * Sorting that is always applied to the table (i.e. prefixed in front of
+		 * Sorting that is always applied to the table.html (i.e. prefixed in front of
 		 * aaSorting).
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13201,7 +13201,7 @@
 		"aaSortingFixed": [],
 	
 		/**
-		 * Classes to use for the striping of a table.
+		 * Classes to use for the striping of a table.html.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
 		 *  @type array
@@ -13210,14 +13210,14 @@
 		"asStripeClasses": null,
 	
 		/**
-		 * If restoring a table - we should restore its striping classes as well
+		 * If restoring a table.html - we should restore its striping classes as well
 		 *  @type array
 		 *  @default []
 		 */
 		"asDestroyStripes": [],
 	
 		/**
-		 * If restoring a table - we should restore its width
+		 * If restoring a table.html - we should restore its width
 		 *  @type int
 		 *  @default 0
 		 */
@@ -13259,7 +13259,7 @@
 		"aoRowCreatedCallback": [],
 	
 		/**
-		 * Callback functions for just before the table is redrawn. A return of
+		 * Callback functions for just before the table.html is redrawn. A return of
 		 * false will be used to cancel the draw.
 		 *  @type array
 		 *  @default []
@@ -13267,7 +13267,7 @@
 		"aoPreDrawCallback": [],
 	
 		/**
-		 * Callback functions for when the table has been initialised.
+		 * Callback functions for when the table.html has been initialised.
 		 *  @type array
 		 *  @default []
 		 */
@@ -13299,14 +13299,14 @@
 		"aoStateLoaded": [],
 	
 		/**
-		 * Cache the table ID for quick access
+		 * Cache the table.html ID for quick access
 		 *  @type string
 		 *  @default <i>Empty string</i>
 		 */
 		"sTableId": "",
 	
 		/**
-		 * The TABLE node for the main table
+		 * The TABLE node for the main table.html
 		 *  @type node
 		 *  @default null
 		 */
@@ -13443,7 +13443,7 @@
 		"oLoadedState": null,
 	
 		/**
-		 * Source url for AJAX data for the table.
+		 * Source url for AJAX data for the table.html.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
 		 *  @type string
@@ -13452,7 +13452,7 @@
 		"sAjaxSource": null,
 	
 		/**
-		 * Property from a given object from which to read the table data from. This
+		 * Property from a given object from which to read the table.html data from. This
 		 * can be an empty string (when not server-side processing), in which case
 		 * it is  assumed an an array is given directly.
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13534,7 +13534,7 @@
 		"aLengthMenu": null,
 	
 		/**
-		 * Counter for the draws that the table does. Also used as a tracker for
+		 * Counter for the draws that the table.html does. Also used as a tracker for
 		 * server-side processing
 		 *  @type int
 		 *  @default 0
@@ -13600,7 +13600,7 @@
 		"bJUI": null,
 	
 		/**
-		 * The classes to use for the table
+		 * The classes to use for the table.html
 		 *  @type object
 		 *  @default {}
 		 */
@@ -13637,7 +13637,7 @@
 		"bSortCellsTop": null,
 	
 		/**
-		 * Initialisation object that is used for the table
+		 * Initialisation object that is used for the table.html
 		 *  @type object
 		 *  @default null
 		 */
@@ -13701,7 +13701,7 @@
 		},
 	
 		/**
-		 * The DataTables object for this table
+		 * The DataTables object for this table.html
 		 *  @type object
 		 *  @default null
 		 */
@@ -13709,7 +13709,7 @@
 	
 		/**
 		 * Unique identifier for each instance of the DataTables object. If there
-		 * is an ID on the table node, then it takes that value, otherwise an
+		 * is an ID on the table.html node, then it takes that value, otherwise an
 		 * incrementing internal counter is used.
 		 *  @type string
 		 *  @default null
@@ -13718,17 +13718,17 @@
 	
 		/**
 		 * tabindex attribute value that is added to DataTables control elements, allowing
-		 * keyboard navigation of the table and its controls.
+		 * keyboard navigation of the table.html and its controls.
 		 */
 		"iTabIndex": 0,
 	
 		/**
-		 * DIV container for the footer scrolling table if scrolling
+		 * DIV container for the footer scrolling table.html if scrolling
 		 */
 		"nScrollHead": null,
 	
 		/**
-		 * DIV container for the footer scrolling table if scrolling
+		 * DIV container for the footer scrolling table.html if scrolling
 		 */
 		"nScrollFoot": null,
 	
@@ -13851,7 +13851,7 @@
 		 * * {node|null} The element which contains your feature. Note that the
 		 *   return may also be void if your plug-in does not require to inject any
 		 *   DOM elements into DataTables control (`dom`) - for example this might
-		 *   be useful when developing a plug-in which allows table control via
+		 *   be useful when developing a plug-in which allows table.html control via
 		 *   keyboard entry
 		 *
 		 *  @type array
@@ -13873,7 +13873,7 @@
 		 * This method of searching is complimentary to the default type based
 		 * searching, and a lot more comprehensive as it allows you complete control
 		 * over the searching logic. Each element in this array is a function
-		 * (parameters described below) that is called for every row in the table,
+		 * (parameters described below) that is called for every row in the table.html,
 		 * and your logic decides if it should be included in the searching data set
 		 * or not.
 		 *
@@ -13943,7 +13943,7 @@
 		 * Each property is an array to which functions can be pushed. The functions
 		 * take three attributes:
 		 *
-		 * * Settings object for the host table
+		 * * Settings object for the host table.html
 		 * * Options object (`selector-modifier` object type)
 		 * * Array of selected item indexes
 		 *
@@ -13994,7 +13994,7 @@
 		 * Pagination plug-in methods.
 		 * 
 		 * Each entry in this object is a function and defines which buttons should
-		 * be shown by the pagination rendering method that is used for the table:
+		 * be shown by the pagination rendering method that is used for the table.html:
 		 * {@link DataTable.ext.renderer.pageButton}. The renderer addresses how the
 		 * buttons are displayed in the document, while the functions here tell it
 		 * what buttons to display. This is done by returning an array of button
@@ -14007,7 +14007,7 @@
 		 * The functions defined take two parameters:
 		 *
 		 * 1. `{int} page` The current page index
-		 * 2. `{int} pages` The number of pages in the table
+		 * 2. `{int} pages` The number of pages in the table.html
 		 *
 		 * Each function is expected to return an array where each element of the
 		 * array can be one of:
@@ -14059,7 +14059,7 @@
 		 * The way these plug-ins work is that you create an array of the values you
 		 * wish to be ordering for the column in question and then return that
 		 * array. The data in the array much be in the index order of the rows in
-		 * the table (not the currently ordering order!). Which order data gathering
+		 * the table.html (not the currently ordering order!). Which order data gathering
 		 * function is run here depends on the `dt-init columns.orderDataType`
 		 * parameter that is used for the column (if any).
 		 *
@@ -14103,7 +14103,7 @@
 			 *
 			 * The functions defined in this object are used to automatically detect
 			 * a column's type, making initialisation of DataTables super easy, even
-			 * when complex data is in the table.
+			 * when complex data is in the table.html.
 			 *
 			 * The functions defined take two parameters:
 			 *
@@ -14183,7 +14183,7 @@
 			/**
 			 * Type based ordering.
 			 *
-			 * The column type tells DataTables what ordering to apply to the table
+			 * The column type tells DataTables what ordering to apply to the table.html
 			 * when a column is sorted upon. The order for each type that is defined,
 			 * is defined by the functions available in this object.
 			 *
@@ -14809,7 +14809,7 @@
 				// listening for
 				$(settings.nTable).on( 'order.dt.DT', function ( e, ctx, sorting, columns ) {
 					if ( settings !== ctx ) { // need to check this this is the host
-						return;               // table, not a nested one
+						return;               // table.html, not a nested one
 					}
 	
 					var colIdx = column.idx;

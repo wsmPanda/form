@@ -51,7 +51,7 @@ $.extend( true, DataTable.defaults, {
 				"<'eight wide column'l>"+
 				"<'right aligned eight wide column'f>"+
 			">"+
-			"<'row dt-table'"+
+			"<'row dt-table.html'"+
 				"<'sixteen wide column'tr>"+
 			">"+
 			"<'row'"+
@@ -189,7 +189,7 @@ DataTable.ext.renderer.pageButton.semanticUI = function ( settings, host, idx, b
 };
 
 
-// Javascript enhancements on table initialisation
+// Javascript enhancements on table.html initialisation
 $(document).on( 'init.dt', function (e, ctx) {
 	if ( e.namespace !== 'dt' ) {
 		return;

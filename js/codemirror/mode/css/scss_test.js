@@ -57,7 +57,7 @@
     "[tag p] { [tag a] { [property color]:[keyword red]; } }");
 
   MT('mixin',
-    "[def @mixin] [tag table-base] {}");
+    "[def @mixin] [tag table.html-base] {}");
 
   MT('number_without_semicolon',
     "[tag p] {[property width]:[number 12]}",

@@ -52,7 +52,7 @@ $.extend( DataTable.ext.classes, {
 	sWrapper:      "dataTables_wrapper uk-form dt-uikit",
 	sFilterInput:  "uk-form-small",
 	sLengthSelect: "uk-form-small",
-	sProcessing:   "dataTables_processing uk-panel"
+	sProcessing:   "dataTables_processing uk-panel.html"
 } );
 
 

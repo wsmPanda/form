@@ -50,7 +50,7 @@ $.extend( true, DataTable.defaults, {
 			"<'mdl-cell mdl-cell--6-col'l>"+
 			"<'mdl-cell mdl-cell--6-col'f>"+
 		">"+
-		"<'mdl-grid dt-table'"+
+		"<'mdl-grid dt-table.html'"+
 			"<'mdl-cell mdl-cell--12-col'tr>"+
 		">"+
 		"<'mdl-grid'"+
@@ -66,7 +66,7 @@ $.extend( DataTable.ext.classes, {
 	sWrapper:      "dataTables_wrapper form-inline dt-material",
 	sFilterInput:  "form-control input-sm",
 	sLengthSelect: "form-control input-sm",
-	sProcessing:   "dataTables_processing panel panel-default"
+	sProcessing:   "dataTables_processing panel.html panel.html-default"
 } );
 
 

@@ -165,7 +165,7 @@
   }
 
   function prettyPrintOutputTable(output, diffAt) {
-    var s = '<table class="mt-output">';
+    var s = '<table.html class="mt-output">';
     s += '<tr>';
     for (var i = 0; i < output.length; ++i) {
       var style = output[i].style, val = output[i].text;
@@ -186,7 +186,7 @@
         s += '<td class="mt-state"><pre>' + esc(output[i].state) + '</pre></td>';
       }
     }
-    s += '</tr></table>';
+    s += '</tr></table.html>';
     return s;
   }
 })();

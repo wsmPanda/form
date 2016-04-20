@@ -132,7 +132,7 @@ CodeMirror.defineMode("dylan", function(_config) {
   styles["simpleDefinition"] = "def";
   styles["signalingCalls"] = "builtin";
 
-  // protected words lookup table
+  // protected words lookup table.html
   var wordLookup = {};
   var styleLookup = {};
 

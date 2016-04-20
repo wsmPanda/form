@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>table</title>
+    <link rel='stylesheet' href='css/site.css'/>
+    <link rel='stylesheet' href='css/codemirror.css'/>
+    <link rel='stylesheet' href='css/daterangepicker.css'/>
+    <link rel='stylesheet' href='css/bootstrap.css'/>
+    <link rel="stylesheet" href="css/umeditor.css">
+    <link rel="stylesheet" href="css/select2.css">
+
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+
+    <script data-main="js/index" src="js/require.js"></script>
+</head>
+<body>
+<div class="container" id="wrapper">
+    <div class="row">
+        <div class="col-md-12 col-ms-12">
+                <h3>数据表</h3>
+                <div class="button-bar col-md-12" style=""><button id="btn-refresh" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-refresh"></span> 刷新</button>
+                    <button id="btn-add"  class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span> 添加</button>
+                    <button id="btn-edit"  class="btn btn-default btn-sm"  disabled="disabled"><span class="glyphicon glyphicon-edit"></span> 编辑</button>
+                    <button id="btn-delete"  class="btn btn-default btn-sm" disabled="disabled"><span class="glyphicon glyphicon-trash"></span> 删除</button>
+                </div>
+                <div class="col-md-4 picker-group">
+                    <input type="text" id="time" class="form-control">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                </div>
+                <div class=" col-md-12">
+                    <table id="mainTable" class="table table-striped table-bordered " >
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

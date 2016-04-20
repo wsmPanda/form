@@ -1095,10 +1095,10 @@ var attrFix = ie && browser.version < 9 ? {
     },
     styleBlock = utils.listToMap([
         '-webkit-box', '-moz-box', 'block' ,
-        'list-item' , 'table' , 'table-row-group' ,
-        'table-header-group', 'table-footer-group' ,
-        'table-row' , 'table-column-group' , 'table-column' ,
-        'table-cell' , 'table-caption'
+        'list-item' , 'table' , 'table.html-row-group' ,
+        'table.html-header-group', 'table.html-footer-group' ,
+        'table.html-row' , 'table.html-column-group' , 'table.html-column' ,
+        'table.html-cell' , 'table.html-caption'
     ]);
 var domUtils = dom.domUtils = {
     //节点常量
@@ -4039,7 +4039,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @name  hasContents
          * @desc
          * 默认有文本内容，或者有以下节点都不认为是空
-         * <code>{table:1,ul:1,ol:1,dl:1,iframe:1,area:1,base:1,col:1,hr:1,img:1,embed:1,input:1,link:1,meta:1,param:1}</code>
+         * <code>{table.html:1,ul:1,ol:1,dl:1,iframe:1,area:1,base:1,col:1,hr:1,img:1,embed:1,input:1,link:1,meta:1,param:1}</code>
          * @grammar editor.hasContents()  => (true|false)
          * @grammar editor.hasContents(tags)  =>  (true|false)  //若文档中包含tags数组里对应的tag，直接返回true
          * @example
@@ -4404,7 +4404,7 @@ var filterWord = UM.filterWord = function () {
                             case "mso-margin-bottom-alt":
                             case "mso-margin-left-alt":
                             //ie下会出现挤到一起的情况
-                            //case "mso-table-layout-alt":
+                            //case "mso-table.html-layout-alt":
                             case "mso-height":
                             case "mso-width":
                             case "mso-vertical-align-alt":
@@ -8914,7 +8914,7 @@ UM.ui.define('colorpicker', {
                 'c00000,ff0000,ffc000,ffff00,92d050,00b050,00b0f0,0070c0,002060,7030a0,').split(',');
 
         var html = '<div unselectable="on" onmousedown="return false" class="edui-colorpicker<%if (name){%> edui-colorpicker-<%=name%><%}%>" >' +
-            '<table unselectable="on" onmousedown="return false">' +
+            '<table.html unselectable="on" onmousedown="return false">' +
             '<tr><td colspan="10">'+opt.lang_themeColor+'</td> </tr>' +
             '<tr class="edui-colorpicker-firstrow" >';
 
@@ -8931,7 +8931,7 @@ UM.ui.define('colorpicker', {
                 '"' +
                 '></a></td>' : '';
         }
-        html += '</tr></table></div>';
+        html += '</tr></table.html></div>';
         return html;
     },
     init: function (options) {

@@ -70,7 +70,7 @@ CodeMirror.defineMode('tiki', function(config) {
     case "[":// Weblink
       return chain(inBlock("variable-3", "]", inText));
       break;
-    case "|": //table
+    case "|": //table.html
       if (stream.eat("|"))
         return chain(inBlock("comment", "||"));
       break;

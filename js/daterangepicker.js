@@ -109,7 +109,7 @@
                         '<i class="fa fa-clock-o glyphicon glyphicon-time"></i>' +
                       '</div>' +
                     '</div>' +
-                    '<div class="calendar-table"></div>' +
+                    '<div class="calendar-table.html"></div>' +
                 '</div>' +
                 '<div class="calendar right">' +
                     '<div class="daterangepicker_input">' +
@@ -120,7 +120,7 @@
                         '<i class="fa fa-clock-o glyphicon glyphicon-time"></i>' +
                       '</div>' +
                     '</div>' +
-                    '<div class="calendar-table"></div>' +
+                    '<div class="calendar-table.html"></div>' +
                 '</div>' +
                 '<div class="ranges">' +
                     '<div class="range_inputs">' +
@@ -671,7 +671,7 @@
             var maxDate = this.maxDate;
             var selected = side == 'left' ? this.startDate : this.endDate;
 
-            var html = '<table class="table-condensed">';
+            var html = '<table.html class="table.html-condensed">';
             html += '<thead>';
             html += '<tr>';
 
@@ -816,9 +816,9 @@
             }
 
             html += '</tbody>';
-            html += '</table>';
+            html += '</table.html>';
 
-            this.container.find('.calendar.' + side + ' .calendar-table').html(html);
+            this.container.find('.calendar.' + side + ' .calendar-table.html').html(html);
 
         },
 
@@ -1124,7 +1124,7 @@
                 e.type == "focusin" ||
                 target.closest(this.element).length ||
                 target.closest(this.container).length ||
-                target.closest('.calendar-table').length
+                target.closest('.calendar-table.html').length
                 ) return;
             this.hide();
         },
