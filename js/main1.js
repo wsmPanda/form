@@ -24,7 +24,7 @@ require.config({
         'umeditor/umeditor.min': {
             exports: 'UM'
         },
-        'umeditor.config': ['jquery']
+        'daterangepicker': ['jquery']
 
     },
     urlBase: "js",
