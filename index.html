@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>FORM</title>
-    <link rel='stylesheet' href='css/site.css' />
-    <script data-main="js/main" src="js/require.js"></script>
+    <link rel='stylesheet' href='css/site.css'/>
+    <link rel='stylesheet' href='css/codemirror.css'/>
+    <link rel='stylesheet' href='css/daterangepicker.css'/>
+    <link rel='stylesheet' href='css/bootstrap.css'/>
+    <link rel="stylesheet" href="css/umeditor.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <script data-main="js/main1" src="js/require.js"></script>
     <!--
+        <script  src="js/jquery-1.12.3.js"></script>
+    <script data-main="js/main" src="js/codemirror.js"></script>
+
+    <script data-main="js/main" src="js/index.js"></script>
+
+
     <script  src="/javascripts/handlebars-v4.0.5.js"></script>
-    <script  src="/javascripts/jquery-1.12.3.js"></script>
     <script  src="/javascripts/t1.js"></script>
     -->
 </head>
 <body>
-<div id="my_div1"></div>
-<script id="table1" type="text/x-handlebars-template">
-    <table>
-        <tr>
-            <td>UserName1</td>
-            <td>Name</td>
-            <td>Email</td>
-        </tr>
-        { "dsadsadsa" }
-        {{#if users}}
-        {{#each users}}
-        <tr>
-            <td>{{username}}</td>
-            <td>{{firstname}}-{{lastname}}</td>
-            <td>{{email}}</td>
-        </tr>
-        {{/each}}
-        {{else}}
-        <tr>
-            <td colspan="3">数据？？？</td>
-        </tr>
-        {{/if}}
-    </table>
-</script>
+<div class="container">
+    <div class="row">
+        <h2>Umeditor</h2>
+        <hr/>
+        <button onclick="t1()">test</button>
+        <script type="text/plain" id="editor" style="width:1000px;height:240px;">
+            <p>输入提示</p>
+
+
+
+        </script>
+
+        <h2>Daterangepicker</h2>
+        <hr/>
+        <div class="col-md-4 picker-group">
+            <input type="text" id="time" class="form-control">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </div>
+        <input id="startTime" class="col-md-3"/>
+        <input id="endTime" class="col-md-3"/>
+        <br/>
+        <br/>
+        <h2>select2</h2>
+        <hr/>
+        <div>
+            <select class="col-md-3" id="s2"></select>
+            <input id="v2" class="col-md-3"/>
+            <input id="t2" class="col-md-3"/>
+        </div>
+        <h2>CodeMirror</h2>
+        <hr/>
+        <textarea id="ta1">
+-- SQL Mode for CodeMirror
+SELECT SQL_NO_CACHE DISTINCT
+		@var1 AS `val1`, @'val2', @global.'sql_mode',
+		1.1 AS `float_val`, .14 AS `another_float`, 0.09e3 AS `int_with_esp`,
+		0xFA5 AS `hex`, x'fa5' AS `hex2`, 0b101 AS `bin`, b'101' AS `bin2`,
+		DATE '1994-01-01' AS `sql_date`, { T "1994-01-01" } AS `odbc_date`,
+		'my string', _utf8'your string', N'her string',
+        TRUE, FALSE, UNKNOWN
+	FROM DUAL
+	-- space needed after '--'
+	# 1 line comment
+	/* multiline
+	comment! */
+	LIMIT 1 OFFSET 0;
+        </textarea>
+
+    </div>
+</div>
 </body>
 </html>

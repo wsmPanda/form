@@ -1,0 +1,13 @@
+hr{
+    clear:both;
+}
+h2{
+    clear:both;
+}
+.picker-group i {
+    position: absolute;
+    bottom: 10px;
+    right: 24px;
+    top: auto;
+    cursor: pointer;
+}
